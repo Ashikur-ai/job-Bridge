@@ -1,13 +1,14 @@
 import { getAuth } from 'firebase/auth';
 import React, { useContext } from 'react';
 import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate, useLocation } from 'react-router-dom';
 import { AuthContext } from '../../provider/AuthProvider';
 import useAuth from '../../hooks/useAuth';
 
 const Login = () => {
     const { googleSignIn, user } = useContext(AuthContext);
-    
+    const navigate = useNavigate();
+    const location = useLocation();
     const handleLogin = (event) => {
         event.preventDefault();
         const form = event.target;
@@ -19,7 +20,11 @@ const Login = () => {
 
     const handleGoogleSignIn = () => {
         googleSignIn()
-            .then()
+            .then(result => {
+                {
+                    location?.state ? location.state: navigate('/')
+                }
+            })
             .catch(error => {
             console.log(error)
         })

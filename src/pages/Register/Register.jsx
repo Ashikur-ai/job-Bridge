@@ -1,13 +1,20 @@
 import React, { useContext } from 'react';
 import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate, useLocation } from 'react-router-dom';
 import { AuthContext } from '../../provider/AuthProvider';
 
 const Register = () => {
     const { googleSignIn } = useContext(AuthContext);
+    const navigate = useNavigate();
+    const location = useLocation();
+
     const handleGoogleSignIn = () => {
         googleSignIn()
-            .then()
+            .then(() => {
+                {
+                    location?.state ? location.state : navigate('/')
+                }
+            })
             .catch(error => {
                 console.log(error)
             })
