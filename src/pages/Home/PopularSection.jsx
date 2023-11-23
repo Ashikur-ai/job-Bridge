@@ -18,7 +18,7 @@ const PopularSection = () => {
                         <p className="font-normal text-gray-700 dark:text-gray-400">Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.</p>
                     </div>
 
-                    <Link className="btn text-white bg-[#338573] col-span-1">View Details</Link>
+                    <Link to="/jobDetails" className="btn text-white bg-[#338573] col-span-1">View Details</Link>
                 </div>
 
 
