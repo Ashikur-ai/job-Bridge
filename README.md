@@ -1,8 +1,12 @@
-# React + Vite
+# job-Bridge
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
-
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+This is a website where job seeking people can find the desired job they wanted. <br>
+The key features are:
+* There are google and email based authentication system.
+* There are two types of role employer and employee.
+* The employee can find the job based on category as well.
+* The employer can post job based on category and it will show on the website.
+* The applied job will be stored on a different database collection and it will show in the applied page.
+* For backend server we use Express, Cors, Mongodb.
+* For frontend we use Tailwind CSS, DaisyUI.
+  
