@@ -14,7 +14,6 @@ const PopularSection = () => {
         }
     })
 
-    console.log(jobs)
 
     return (
         <>
@@ -32,7 +31,7 @@ const PopularSection = () => {
                             <p className="font-normal text-gray-700 dark:text-gray-400">{job.description}</p>
                         </div>
 
-                        <Link to="/jobDetails" className="btn text-white bg-[#338573] col-span-1">View Details</Link>
+                        <Link to={`/jobDetails/${job._id}`} className="btn text-white bg-[#338573] col-span-1">View Details</Link>
                     </div>
 
 
@@ -40,7 +39,7 @@ const PopularSection = () => {
             }
 
             <div className='flex justify-center py-5'>
-                <Link className="btn text-white bg-[#338573]">View more<FaArrowRightFromBracket></FaArrowRightFromBracket></Link>
+                <Link to="/allJobs" className="btn text-white bg-[#338573]">View more<FaArrowRightFromBracket></FaArrowRightFromBracket></Link>
             </div>
         </>
     );
